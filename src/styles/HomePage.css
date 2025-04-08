@@ -1,0 +1,139 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px); /* Full viewport height minus navbar */
+    padding: 40px 5%; /* Percentage-based padding for better responsiveness */
+    margin-top: 80px; /* Navbar height */
+    background-color: #f5f5f5;
+  }
+  
+  .home-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 60px;
+    flex-grow: 1; /* Allow it to grow to fill space */
+  }
+  
+  .home-image {
+    width: 50%; /* Take up half the width */
+    max-width: 800px; /* But don't grow beyond this */
+    min-width: 400px; /* Minimum size */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+  }
+  
+  .home-content {
+    width: 45%; /* Take up remaining space */
+    min-width: 400px;
+    max-width: 600px;
+  }
+  
+  .home-title {
+    color: #e10600;
+    font-size: 3rem; /* Larger text */
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .home-subtitle {
+    color: #333;
+    font-size: 1.5rem; /* Larger subtitle */
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .home-text {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 40px; /* More spacing */
+    font-size: 1.2rem; /* Slightly larger text */
+  }
+  
+  .home-cta {
+    display: inline-block;
+    background-color: #e10600;
+    color: white;
+    padding: 15px 30px; /* Larger button */
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .home-cta:hover {
+    background-color: #c00500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(225, 6, 0, 0.3);
+  }
+  
+  .home-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-top: auto; /* Push to bottom */
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #e10600;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-title {
+    color: #e10600;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .feature-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 1200px) {
+    .home-image,
+    .home-content {
+      width: 100%;
+      max-width: 100%;
+      min-width: auto;
+    }
+    
+    .home-features {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-title {
+      font-size: 2.2rem;
+    }
+    
+    .home-subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .home-page {
+      padding: 30px 20px;
+    }
+  }

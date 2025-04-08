@@ -1,0 +1,181 @@
+.about-page {
+    max-width: 1400px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+    color: #333;
+  }
+  
+  .about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/jdm-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .about-title {
+    font-size: 3.5rem;
+    color: #e10600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #e10600;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #e10600;
+    margin: 15px auto 0;
+  }
+  
+  .history-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+  }
+  
+  .history-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .history-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .timeline-item {
+    flex: 1;
+    min-width: 200px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #e10600;
+  }
+  
+  .racers-section {
+    margin-bottom: 80px;
+  }
+  
+  .racer-cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .racer-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .racer-image {
+    width: 300px;
+    object-fit: cover;
+  }
+  
+  .racer-info {
+    padding: 30px;
+    flex: 1;
+  }
+  
+  .racer-title {
+    color: #e10600;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .racer-stats {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .racer-stats li {
+    margin-bottom: 8px;
+  }
+  
+  .jdm-philosophy {
+    margin-bottom: 60px;
+  }
+  
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .philosophy-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid #e10600;
+  }
+  
+  .philosophy-card h3 {
+    color: #e10600;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.5rem;
+    }
+    
+    .about-hero {
+      height: 300px;
+    }
+    
+    .racer-card {
+      flex-direction: column;
+    }
+    
+    .racer-image {
+      width: 100%;
+      height: 200px;
+    }
+  }
