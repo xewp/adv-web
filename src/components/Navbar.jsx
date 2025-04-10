@@ -22,7 +22,9 @@ function Navbar() {
           <Link to="/articles">Articles</Link>
         </li>
       </ul>
-      <Button>Login</Button>
+      <Link to="/login"> {/* Link the button */}
+        <Button>Login</Button>
+      </Link>
     </nav>
   );
 }
