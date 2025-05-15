@@ -1,245 +1,191 @@
-/* HackedErrorPage.css */
-/* Base styles */
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  font-family: 'Courier New', monospace;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+/* NotFoundPage.css */
 
-/* Container */
-.hacked-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  color: #0f0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-/* Matrix background */
-.matrix-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000;
-  z-index: 0;
-}
-
-.matrix-chars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-}
-
-.matrix-char {
-  position: absolute;
-  color: #0f0;
-  opacity: 0.5;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
-}
-
-/* Terminal window */
-.terminal-window {
-  width: 80%;
-  max-width: 768px;
-  background-color: #000;
-  border: 2px solid #0f0;
-  border-radius: 4px;
-  padding: 1.5rem;
-  z-index: 20;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-}
-
-.terminal-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.terminal-button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.terminal-button.red {
-  background-color: #ff5f56;
-}
-
-.terminal-button.yellow {
-  background-color: #ffbd2e;
-}
-
-.terminal-button.green {
-  background-color: #27c93f;
-}
-
-.terminal-title {
-  margin-left: 1rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.terminal-content {
-  height: 16rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.terminal-content pre {
-  font-family: 'Courier New', monospace;
-  color: #0f0;
-  margin: 0;
-  white-space: pre-wrap;
-}
-
-.cursor {
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.glitch-text {
-  animation: pulse 0.5s infinite alternate;
-}
-
-@keyframes pulse {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
-}
-
-/* Warning overlay */
-.warning-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #900;
-  opacity: 0.3;
-  z-index: 10;
-  animation: pulse 2s infinite;
-}
-
-/* Warning message */
-.warning-message {
-  margin-top: 2rem;
-  background-color: #900;
-  border: 2px solid #f00;
-  padding: 1rem;
-  max-width: 768px;
-  width: 80%;
-  color: white;
-  z-index: 20;
-  animation: pulse 2s infinite;
-  text-align: center;
-}
-
-.warning-message h2 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.warning-message p {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.countdown {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Final message */
-.final-message {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.final-text {
-  color: #f00;
-  font-size: 3.75rem;
-  font-weight: bold;
-  animation: bounce 1s infinite alternate;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-@keyframes bounce {
-  from { transform: translateY(0); }
-  to { transform: translateY(-30px); }
-}
-
-/* Safety button */
-.safety-button {
-  margin-top: 2rem;
-  padding: 0.5rem 1rem;
-  background-color: #333;
-  color: white;
-  border: 1px solid #666;
-  cursor: pointer;
-  z-index: 20;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.safety-button:hover {
-  background-color: #444;
-}
-
-/* Additional fullscreen styles */
-@media screen and (max-width: 768px) {
-  .terminal-window {
-    width: 90%;
-    padding: 1rem;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
   }
   
+  .hacked-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* Matrix-style animated background */
+  .matrix-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .matrix-chars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .matrix-char {
+    position: absolute;
+    color: rgba(255, 0, 0, 0.2);
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  
+  /* Red overlay when warning appears */
+  .warning-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.1);
+    z-index: 1;
+    animation: flicker 0.2s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0% { opacity: 0.05; }
+    100% { opacity: 0.15; }
+  }
+  
+  /* Terminal window */
+  .terminal-window {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #111;
+    border: 2px solid red;
+    z-index: 2;
+    box-shadow: 0 0 20px red;
+  }
+  
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #222;
+    border-bottom: 1px solid red;
+  }
+  
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  
+  .terminal-button.red { background-color: #ff5f56; }
+  .terminal-button.yellow { background-color: #ffbd2e; }
+  .terminal-button.green { background-color: #27c93f; }
+  
+  .terminal-title {
+    color: red;
+    margin-left: auto;
+    font-size: 14px;
+  }
+  
+  .terminal-content {
+    padding: 20px;
+    white-space: pre-wrap;
+    color: red;
+  }
+  
+  .cursor {
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
+  /* Glitch effect */
+  .glitch-text {
+    animation: glitch 0.5s infinite;
+  }
+  
+  @keyframes glitch {
+    0% { text-shadow: 2px 0 red; }
+    20% { text-shadow: -2px -2px red; }
+    40% { text-shadow: 2px 2px red; }
+    60% { text-shadow: -2px 2px red; }
+    80% { text-shadow: 2px -2px red; }
+    100% { text-shadow: -2px 0 red; }
+  }
+  
+  /* Warning message */
   .warning-message {
-    width: 90%;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    font-size: 1.2rem;
+    border: 2px dashed red;
+    animation: warningPulse 1s infinite;
+  }
+  
+  @keyframes warningPulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  .countdown {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Final scary message */
+  .final-message {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
   }
   
   .final-text {
     font-size: 2.5rem;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px red;
+    animation: glitch 0.4s infinite;
   }
-}
+  
+  /* Return to safety button */
+  .safety-button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: 2px solid red;
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 5;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .safety-button:hover {
+    background-color: red;
+    color: black;
+    cursor: pointer;
+  }
+  

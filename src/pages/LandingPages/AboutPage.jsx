@@ -1,9 +1,9 @@
 import React from 'react';
-import jdmHistoryImage from '../assets/his.jpg'; // Add appropriate image
-import famousRacerImage from '../assets/kic.jpeg'; // Add appropriate image
+import jdmHistoryImage from '../../assets/his.jpg'; // Add appropriate image
+import famousRacerImage from '../../assets/kic.jpeg'; // Add appropriate image
 
-import takumiImage from '../assets/taku.jpg'; // Add this import at the top
-import '../styles/AboutPage.css';
+import takumiImage from '../../assets/taku.jpg'; // Add this import at the top
+import '../../styles/AboutPage.css';
 
 function AboutPage() {
   return (

@@ -1,0 +1,124 @@
+/* src/pages/LoginPage.css */
+.login-container {
+    position: fixed;
+    top: 80px; /* Navbar height */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.login-box {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.login-title {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-group label {
+    color: #ff3333;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.form-group input {
+    padding: 1rem;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}
+
+.login-button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.login-button:hover {
+    background: #e60000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.login-button:active {
+    transform: translateY(1px);
+}/* LoginPage.css (Add these styles to your existing CSS) */
+.register-prompt {
+    margin-top: 2rem;
+    text-align: center;
+    color: #ccc;
+}
+
+.register-prompt p {
+    margin-bottom: 1rem;
+}
+
+.register-button {
+    display: inline-block;
+    background: transparent;
+    color: #e10600;
+    border: 2px solid #e10600;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.register-button:hover {
+    background: #e10600;
+    color: #000;
+    box-shadow: 0 0 15px rgba(225, 6, 0, 0.4);
+}

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
-import Footer from './Footer'; // Import the Footer component
 import '../styles/Layout.css';
 
 const Layout = () => {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <div className="layout-container">
-        <Outlet />
-      </div>
-      <Footer /> {/* Add Footer here */}
-    </>
+      <main className="content-wrapper">
+        <div className="layout-container">
+          <Outlet />
+        </div>
+      </main>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import ArticleList from '../components/ArticleList';
-import articles from '../article-content.js';
+import ArticleList from '../../components/ArticleList.jsx';
+import articles from '../../article-content.js';
 
 function ArticleListPage() {
   return (

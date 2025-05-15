@@ -1,6 +1,6 @@
 import React from 'react';
-import jdmHeroImage from '../assets/awe.jpg';
-import '../styles/HomePage.css';
+import jdmHeroImage from '../../assets/awe.jpg';
+import '../../styles/HomePage.css';
 
 function HomePage() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import ArticleList from '../components/ArticleList';
-import articles from '../article-content';
+import ArticleList from '../../components/ArticleList';  // Adjusted path
+import articles from '../../article-content';           // Adjusted path
 
 function ArticleListPage() {
   return (
